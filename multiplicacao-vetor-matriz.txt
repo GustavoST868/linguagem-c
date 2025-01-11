@@ -1,0 +1,120 @@
+Questão envolvendo matrizes e vetores:
+
+Implemente um programa em C que realiza o seguinte:
+
+Pergunte ao usuário o tamanho N de uma matriz quadrada (NxN) e leia o valor digitado.
+
+Crie uma matriz quadrada de tamanho NxN e preencha-a com valores aleatórios entre 0 e 9 (inclusive).
+
+Crie um vetor de tamanho N e preencha-o com valores aleatórios entre 0 e 9 (inclusive).
+
+Multiplique cada linha da matriz pelo valor correspondente no vetor, ou seja, a primeira linha da matriz é 
+multiplicada pelo primeiro elemento do vetor,a segunda linha da matriz é multiplicada pelo segundo elemento do vetor,
+ e assim por diante.
+
+Imprima a matriz original e a matriz resultante da multiplicação.
+
+
+
+
+Algoritmo: 
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<locale.h>
+
+
+int main()
+
+
+{
+
+
+        setlocale(LC_ALL,"Portuguese");
+
+
+        int matriz[4][4];
+
+
+        int i,j;
+
+
+        //Conjunto de instruções para receber os dados da matriz:
+
+
+        printf("============================================================");
+
+
+        printf("\n\n[  Informe os valores que copoem a matriz 4x4  ]  \n\n");
+
+
+        for(i=0;i<4;i++)//Linhas;
+
+
+        {
+
+
+                printf("============================================================");
+
+
+                for(j=0;j<4;j++)//Elementos das linhas;
+
+
+                {
+
+                        printf("\nElemento [%d] da linha [%d]  :  ",(j+1),(i+1));
+                        scanf("%d",&matriz[i][j]);//Complementa cada linha com seus elementos;
+
+
+                }
+
+
+        }
+
+
+        printf("============================================================");//Coloca a separação final;
+
+
+        //Mostrar o que foi passado pelo usuário:
+
+
+        printf("\nMatriz informada pelo usuário :  \n");
+
+
+        for(i=0;i<4;i++)//Linhas;
+
+
+        {
+
+
+                printf("\n\n");
+
+
+                for(j=0;j<4;j++)//Elementos das linhas;
+
+
+                {
+
+                        printf(" [  %d  ] ",matriz[i][j]);
+                        
+
+                }
+
+
+        }
+
+
+        printf("\n\n");
+
+
+        system("pause");
+
+
+        return 0;
+
+
+}

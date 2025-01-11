@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<locale.h>
+
+int main()
+
+{
+
+    setlocale(LC_ALL,"Portuguese");
+
+    int num,i,fib1=0,fib2=1,fib3;
+
+    printf("\nInforme um número : ");
+    scanf("%d",&num);
+    
+    printf("\n\n");
+
+    for(i=0;i<=num;i++)
+
+    {
+        
+        printf(" %d ",fib1);
+        fib3 = fib1+fib2;
+        fib1=fib2;
+        fib2=fib3;
+
+    }
+    
+    printf("\n\n");
+
+}

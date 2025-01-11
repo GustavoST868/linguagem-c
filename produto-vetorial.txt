@@ -1,0 +1,139 @@
+#include<stdio.h>
+#include<string.h>
+
+
+int main()
+
+
+{
+
+        int i;
+
+
+        char vets[3] = {'i','j','k'};//Vetor Superior;
+        int veti[3];//Vetor intermediário;
+        int vetin[3];//Vetor inferior;
+        
+
+        printf("\n\nInforme os valores da linha dois da matriz : \n\n");
+        scanf("%d%d%d",&veti[0],&veti[1],&veti[2]);//Pega os valores da segunda linha;
+
+
+        printf("\n\nInforme os valores da linha três da matriz : \n\n");
+        scanf("%d%d%d",&vetin[0],&vetin[1],&vetin[2]);//Pega os valores da terceira linha;
+
+
+        printf("\n\n\n\n");
+    
+
+        for(i=0;i<3;i++)//Mostra o que está no vetor superior;
+
+
+        {
+
+
+                printf("    [%c]    ",vets[i]);//Mostra o valor de cada item do vetor;
+
+
+
+        }
+
+
+        printf("\n\n");
+
+
+        for(i=0;i<3;i++)//Mostra o que está no vetor intermediário;
+
+
+        {
+
+
+                printf("    [%d]    ",veti[i]);//Mostra o valor de cada item do vetor intermediário;
+
+
+        }
+
+
+        printf("\n\n");
+
+
+        for(i=0;i<3;i++)//Mostra o que está no vetor inferior;
+
+
+        {
+
+
+                printf("    [%d]    ",vetin[i]);//Mostra o valor de cada item do vetor inferior;
+
+
+        }
+
+
+        printf("\n\n\n\n");
+
+
+        printf("\n\n\nDuplicar as duas primeira colunas : \n\n\n\n\n\n\n");
+
+
+        for(i=0;i<3;i++)//Mostra o que está no vetor superior;
+
+
+        {
+
+
+                printf("    [%c]    ",vets[i]);//Mostra o valor de cada item do vetor;
+
+
+
+        }
+
+
+        printf("\t[%c]",vets[0]);
+        printf("\t[%c]",vets[1]);
+
+
+        printf("\n\n");
+
+
+        for(i=0;i<3;i++)//Mostra o que está no vetor intermediário;
+
+
+        {
+
+
+                printf("    [%d]    ",veti[i]);//Mostra o valor de cada item do vetor intermediário;
+
+
+        }
+
+
+        printf("\t[%d]",veti[0]);
+        printf("\t[%d]",veti[1]);
+
+
+        printf("\n\n");
+
+
+        for(i=0;i<3;i++)//Mostra o que está no vetor inferior;
+
+
+        {
+
+
+                printf("    [%d]    ",vetin[i]);//Mostra o valor de cada item do vetor inferior;
+
+
+        }
+
+
+        printf("\t[%d]",vetin[0]);
+        printf("\t[%d]",vetin[1]);
+
+
+        printf("\n\n\n\n\n\n\n");//Espaçamento;
+
+
+        printf("\n\nEquações obtida a partir das diagonais : \n\n");
+
+
+}

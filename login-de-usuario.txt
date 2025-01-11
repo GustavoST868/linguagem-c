@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+
+int main(){
+  
+setlocale(LC_ALL, "portuguese");
+  
+char nome[100];
+char senha[100];
+int controle;
+
+while( controle != 2 ){
+          
+printf("\nInforme um nome : ");
+scanf("%s",nome);
+
+printf("Informe uma senha : ");
+scanf("%s",senha);
+
+if(strcmp(senha, nome)==0){
+  printf("\nNão é permitido ter a senha e o nome iguais,portanto informe outros dados de usuário.");
+}
+           
+printf("\nDeseja acessar o sistema?\n1 = Sim\n2 = Não\n");
+scanf("%d",&controle);
+}
+           
+ return 0;
+}

@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <locale.h>
+
+//FUNÇÃO RECURSIVA PARA CALCULAR O FATORIAL:
+
+int calcular_fatorial(int n){
+  
+  if( n == 0 || n == 1 ){//REPRESENTA O FIM DA SEQUÊNCIA DE EXECUÇÃO;
+    
+    return 1;
+    
+  }else{
+    
+    return n * calcular_fatorial( n - 1 );
+    
+  }
+}
+
+int main(){
+
+   int numero;
+   int fatorial;
+
+   printf("\nDigite um número inteiro não negativo :\n");
+   scanf("%d",&numero);
+  
+  //CASO DIGITE UM VALOR MENOR QUE ZERO:
+  
+  if(numero <  0  ){
+
+    printf("\nERRO O NÚMERO NÃO PODE SER NEGATIVO.\n");
+    
+    return 0;
+    
+  }
+
+  fatorial = calcular_fatorial(numero);
+
+  printf("O fatorial de %d é %d",numero,fatorial);
+  
+  return 0; 
+  
+}

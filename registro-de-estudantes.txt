@@ -1,0 +1,96 @@
+//CREATE A SYSTEM FOR A SCHOOL:
+
+//used libraries:
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+
+
+//define the structure:
+struct General_date{
+  int  age;
+  char student_name[100];
+  char responsive_name[100];
+  int  registration_number;
+};struct General_date gd[10];
+
+int options;
+int cont = -1;
+
+
+//function to get the age:
+void get_age(){
+  cont++;
+  printf("\nInforme the age : ");
+  scanf("%d",&gd[cont].age);
+  printf("\nStored age =  [%d]\n",gd[cont].age);
+}
+
+
+//function to get student name :
+void get_student_name(){ 
+  printf("\nProvide the standent name : ");
+  scanf("%s",gd[cont].student_name);
+  printf("\nRegistred name  = [%s]\n",gd[cont].student_name);
+}
+
+
+//function to get  name of the responsive :
+void get_responsive_name(){ 
+  printf("\nProvide the name of registred person : ");
+  scanf("%s",gd[cont].responsive_name);
+  printf("\nName of registred person  = [%s]\n",gd[cont].responsive_name);
+}
+
+//function to get registration number:
+void get_registration_number(){
+  printf("  \nInform the registration number : ");
+  scanf("%d",&gd[cont].registration_number);
+  printf("\nRegistred registration number  [%d]\n",gd[cont].registration_number);
+}
+
+
+int main(void) {setlocale(LC_ALL,"portuguese");
+
+  //loop control variable:
+  int control     = 0;
+  int control_two = 0;
+
+  //loop to keep the user in the program:
+  while( control != 1 ){ 
+                
+   //ask if the user wants to register:             
+  printf("\nDo you want to register a student ?\n1 - Yes\n2 - No\n\n");
+  scanf("%d",&options);
+
+  //if you want to register:              
+  if( options == 1 ){
+    //functions to get the date:
+     get_age();
+     get_student_name();
+     get_responsive_name();
+     get_registration_number();
+  }
+
+    //show the date that was saved:
+    printf("\nShow the date that was saved ?\n1 - yes\n2 - no\n\n");
+    scanf("%d",&control_two);
+
+
+  if( control_two == 1 ){ 
+  for(int i = 0; i< (cont+1); i++){
+    printf("\nRegistred name  = [%s]",gd[i].student_name);
+    printf("\nStored age =  [%d]",gd[i].age);
+    printf("\nName of registred person  = [%s]",gd[i].responsive_name);
+    printf("\nRegistred registration number : [%d]\n\n",gd[i].registration_number);
+  }}
+
+  
+  printf("\n\nDo you want to continue int the program?\n1 - no\n2 - yes\n");
+  scanf("%d",&control);
+
+  }
+  
+  
+  return 0;
+}

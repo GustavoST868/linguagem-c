@@ -1,0 +1,39 @@
+#include stdio.h
+#include locale.h
+#include math.h
+
+int main(){setlocale(LC_ALL,portuguese);
+           
+Recebe o número;
+int numero;
+printf(Informe um número entre 1 e 9999  );
+scanf(%d,&numero);
+
+Tratamento do número
+      
+Dezena
+int dezena;
+dezena = ( ( numero10 ) % 10);
+
+Centena
+int centena;
+centena = ( ( numero100 ) % 10);
+       
+Milhar
+int milhar = ( ( numero1000 ) % 100);
+
+Unidade
+int unidade = ( numero % 10 ); 
+
+Mostrar as partes do número           
+printf(nUnidade = [%d],unidade);
+printf(nDezena = [%d],dezena);
+printf(nCentena = [%d],centena); 
+printf(nMilhar = [%d],milhar);
+
+if((pow(unidade,3)+pow(dezena,3)+pow(centena,3)+pow(milhar,3))==numero){
+  printf(n[ Este número é de Armstrong ]n);
+}else{printf(nn[ Este número não é de Armstrong ]n);}
+
+  return 0;
+}
